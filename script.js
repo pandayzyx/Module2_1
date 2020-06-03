@@ -40,7 +40,7 @@ function get_data_for_mostpopular() {
 		key == "inception";
 	}
 	var xhr = new XMLHttpRequest();
-	var url = "http://www.omdbapi.com/?apikey=ede4d490&s=";
+	var url = "https://www.omdbapi.com/?apikey=ede4d490&s=";
 	xhr.open("GET", url + key);
 	xhr.send();
 	xhr.onload = function () {
@@ -83,7 +83,7 @@ function display_data_most_popular(data, title, year) {
 //Function to load all the data from api to web page as the page loads foor batman movies
 function get_data_for_batman() {
 	var xhr = new XMLHttpRequest();
-	var url = "http://www.omdbapi.com/?apikey=ede4d490&s=";
+	var url = "https://www.omdbapi.com/?apikey=ede4d490&s=";
 	var key = "batman";
 	xhr.open("GET", url + key);
 	xhr.send();
@@ -114,7 +114,7 @@ function display_data_batman(data) {
 //Function to load all the data from api to web page as the page loads for lord of the rings movies
 function get_data_for_lordoftherings() {
 	var xhr = new XMLHttpRequest();
-	var url = "http://www.omdbapi.com/?apikey=ede4d490&s=";
+	var url = "https://www.omdbapi.com/?apikey=ede4d490&s=";
 	var key = "lord of the rings";
 	xhr.open("GET", url + key);
 	xhr.send();
@@ -145,7 +145,7 @@ function display_data_lordoftherings(data) {
 //Function to load all the data from api to web page as the page loads for superman movies
 function get_data_for_superman() {
 	var xhr = new XMLHttpRequest();
-	var url = "http://www.omdbapi.com/?apikey=ede4d490&s=";
+	var url = "https://www.omdbapi.com/?apikey=ede4d490&s=";
 	var key = "superman";
 	xhr.open("GET", url + key);
 	xhr.send();
@@ -176,7 +176,7 @@ function display_data_superman(data) {
 //Function to load all the data from api to web page as the page loads for avengers movies
 function get_data_for_avenger() {
 	var xhr = new XMLHttpRequest();
-	var url = "http://www.omdbapi.com/?apikey=ede4d490&s=";
+	var url = "https://www.omdbapi.com/?apikey=ede4d490&s=";
 	var key = "avengers";
 	xhr.open("GET", url + key);
 	xhr.send();
@@ -208,7 +208,7 @@ function display_data_avenger(data) {
 function search_movie() {
 	clear_card();
 	var xhr = new XMLHttpRequest();
-	var url = "http://omdbapi.com/?apikey=ede4d490&s=&s=";
+	var url = "https://omdbapi.com/?apikey=ede4d490&s=&s=";
 	var input_key = document.getElementById("key_value");
 	var key = input_key.value;
 	xhr.open("GET", url + key);
@@ -304,14 +304,15 @@ home_btn.addEventListener("click", homepage);
 function send_request_by_year_title() {
 	clear_card();
 	var xhr = new XMLHttpRequest();
-	var url = "http://omdbapi.com/?apikey=ede4d490&s=&s=";
+	var url = "https://omdbapi.com/?apikey=ede4d490&s=&s=";
 	var input_key = document.getElementById("key_value");
 	var title_input = document.getElementById("title_input");
 	var year_input = document.getElementById("year_input");
 	var select_btn = document.querySelector("select");
 
 	var changing_key =
-		"http://www.omdbapi.com/?apikey=ede4d490&plot=short&t=" + title_input.value;
+		"https://www.omdbapi.com/?apikey=ede4d490&plot=short&t=" +
+		title_input.value;
 
 	if (
 		select_btn.value == "movie" ||
@@ -319,7 +320,7 @@ function send_request_by_year_title() {
 		(select_btn.value == "episode" && year_input.value.length != 0)
 	) {
 		changing_key =
-			"http://www.omdbapi.com/?apikey=ede4d490&plot=short&t=" +
+			"https://www.omdbapi.com/?apikey=ede4d490&plot=short&t=" +
 			title_input.value +
 			"&type=" +
 			select_btn.value +
@@ -329,7 +330,7 @@ function send_request_by_year_title() {
 		console.log("12");
 		//console.log(select_btn.value)
 		changing_key =
-			"http://www.omdbapi.com/?apikey=ede4d490&plot=short&t=" +
+			"https://www.omdbapi.com/?apikey=ede4d490&plot=short&t=" +
 			title_input.value +
 			"&y=" +
 			year_input.value;
@@ -340,13 +341,13 @@ function send_request_by_year_title() {
 		(select_btn.value == "episode" && year_input.value.length == 0)
 	) {
 		changing_key =
-			"http://www.omdbapi.com/?apikey=ede4d490&plot=short&t=" +
+			"https://www.omdbapi.com/?apikey=ede4d490&plot=short&t=" +
 			title_input.value +
 			"&type=" +
 			select_btn.value;
 	} else {
 		changing_key =
-			"http://www.omdbapi.com/?apikey=ede4d490&plot=short&t=" +
+			"https://www.omdbapi.com/?apikey=ede4d490&plot=short&t=" +
 			title_input.value;
 	}
 
