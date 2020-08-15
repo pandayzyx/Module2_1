@@ -295,7 +295,7 @@ function clear_card() {
 //Function to take user to home page when he cliks home button
 function homepage() {
 	window.location.href =
-		"file:///home/gaurav/projects/masai/sprint_2/movie.html";
+		"https://pandayzyx.github.io/ProjectMovieDatabase/";
 }
 var home_btn = document.getElementById("home");
 home_btn.addEventListener("click", homepage);
